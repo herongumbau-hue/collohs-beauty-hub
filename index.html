@@ -1,0 +1,2714 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>Colloh's Beauty Hub Westlands</title>
+
+  <meta
+    name="description"
+    content="Colloh's Beauty Hub Westlands – professional beauty and nail services in Westlands, Nairobi."
+  >
+
+  <style>
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    html {
+      scroll-behavior: smooth;
+    }
+
+    body {
+      font-family: Arial, Helvetica, sans-serif;
+      background: #fff8fb;
+      color: #2b1b24;
+      line-height: 1.6;
+    }
+
+    a {
+      text-decoration: none;
+      color: inherit;
+    }
+
+    button,
+    input,
+    select,
+    textarea {
+      font: inherit;
+    }
+
+    img {
+      max-width: 100%;
+      display: block;
+    }
+
+    .container {
+      width: 92%;
+      max-width: 1150px;
+      margin: auto;
+    }
+
+    header {
+      position: sticky;
+      top: 0;
+      z-index: 1000;
+      background: rgba(255, 248, 251, 0.97);
+      border-bottom: 1px solid #f1dce5;
+      backdrop-filter: blur(10px);
+    }
+
+    .nav {
+      min-height: 72px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 20px;
+    }
+
+    .logo {
+      font-size: 1.35rem;
+      font-weight: 800;
+      color: #a62f65;
+    }
+
+    .nav-links {
+      display: flex;
+      align-items: center;
+      gap: 22px;
+      list-style: none;
+    }
+
+    .nav-links a {
+      font-weight: 600;
+      color: #4b2638;
+    }
+
+    .nav-links a:hover {
+      color: #c13e77;
+    }
+
+    .menu-btn {
+      display: none;
+      border: none;
+      background: #a62f65;
+      color: white;
+      padding: 9px 13px;
+      border-radius: 8px;
+      cursor: pointer;
+    }
+
+    .hero {
+      min-height: 650px;
+      display: flex;
+      align-items: center;
+      background:
+        linear-gradient(
+          rgba(61, 16, 39, 0.55),
+          rgba(61, 16, 39, 0.55)
+        ),
+        url("https://images.unsplash.com/photo-1604654894610-df63bc536371?auto=format&fit=crop&w=1600&q=85")
+        center/cover;
+      color: white;
+    }
+
+    .hero-content {
+      max-width: 700px;
+      padding: 70px 0;
+    }
+
+    .hero h1 {
+      font-size: clamp(2.5rem, 6vw, 5rem);
+      line-height: 1.05;
+      margin-bottom: 20px;
+    }
+
+    .hero p {
+      font-size: 1.15rem;
+      max-width: 650px;
+      margin-bottom: 28px;
+    }
+
+    .hero-buttons {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 12px;
+    }
+
+    .btn {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      border: none;
+      cursor: pointer;
+      padding: 13px 20px;
+      border-radius: 10px;
+      font-weight: 700;
+      transition: 0.2s;
+    }
+
+    .btn:hover {
+      transform: translateY(-2px);
+    }
+
+    .btn-primary {
+      background: #c13e77;
+      color: white;
+    }
+
+    .btn-secondary {
+      background: white;
+      color: #8d2858;
+    }
+
+    .btn-dark {
+      background: #3b2230;
+      color: white;
+    }
+
+    .btn-danger {
+      background: #b42318;
+      color: white;
+    }
+
+    .btn-success {
+      background: #17803d;
+      color: white;
+    }
+
+    .btn-small {
+      padding: 8px 12px;
+      font-size: 0.85rem;
+      border-radius: 7px;
+    }
+
+    section {
+      padding: 75px 0;
+    }
+
+    .section-title {
+      text-align: center;
+      margin-bottom: 42px;
+    }
+
+    .section-title h2 {
+      font-size: clamp(2rem, 4vw, 3rem);
+      color: #84254f;
+      margin-bottom: 8px;
+    }
+
+    .section-title p {
+      color: #765968;
+    }
+
+    .services-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 22px;
+    }
+
+    .service-card {
+      background: white;
+      border: 1px solid #f0dbe5;
+      border-radius: 18px;
+      padding: 28px;
+      box-shadow: 0 8px 30px rgba(98, 39, 67, 0.07);
+    }
+
+    .service-card h3 {
+      color: #a62f65;
+      margin-bottom: 10px;
+    }
+
+    .service-card p {
+      color: #715563;
+    }
+
+    .booking-wrapper {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 30px;
+      align-items: start;
+    }
+
+    .info-card,
+    .form-card {
+      background: white;
+      border-radius: 18px;
+      padding: 30px;
+      border: 1px solid #f0dbe5;
+      box-shadow: 0 8px 30px rgba(98, 39, 67, 0.07);
+    }
+
+    .info-card h3,
+    .form-card h3 {
+      color: #8f2957;
+      margin-bottom: 15px;
+    }
+
+    .hours {
+      list-style: none;
+      margin-top: 15px;
+    }
+
+    .hours li {
+      display: flex;
+      justify-content: space-between;
+      padding: 8px 0;
+      border-bottom: 1px solid #f1e3e9;
+    }
+
+    .sunday-note {
+      background: #fff0f6;
+      padding: 14px;
+      border-radius: 10px;
+      margin-top: 18px;
+      color: #8b2855;
+      font-weight: 600;
+    }
+
+    .form-group {
+      margin-bottom: 16px;
+    }
+
+    .form-group label {
+      display: block;
+      font-weight: 700;
+      margin-bottom: 6px;
+    }
+
+    .form-group input,
+    .form-group select,
+    .form-group textarea {
+      width: 100%;
+      padding: 12px;
+      border: 1px solid #dfc6d1;
+      border-radius: 9px;
+      outline: none;
+      background: white;
+    }
+
+    .form-group input:focus,
+    .form-group select:focus,
+    .form-group textarea:focus {
+      border-color: #c13e77;
+    }
+
+    textarea {
+      min-height: 100px;
+      resize: vertical;
+    }
+
+    .form-message {
+      margin-top: 12px;
+      padding: 10px;
+      border-radius: 8px;
+      display: none;
+    }
+
+    .success-message {
+      display: block;
+      background: #e9f8ef;
+      color: #176b37;
+    }
+
+    .error-message {
+      display: block;
+      background: #fdecec;
+      color: #a61b1b;
+    }
+
+    .review-form {
+      max-width: 700px;
+      margin: 0 auto 45px;
+      background: white;
+      padding: 28px;
+      border-radius: 18px;
+      border: 1px solid #f0dbe5;
+    }
+
+    .reviews-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 20px;
+    }
+
+    .review-card {
+      background: white;
+      padding: 22px;
+      border-radius: 15px;
+      border: 1px solid #f0dbe5;
+    }
+
+    .review-name {
+      font-weight: 800;
+      color: #8f2957;
+    }
+
+    .stars {
+      color: #e29b1c;
+      letter-spacing: 2px;
+      margin: 5px 0 10px;
+    }
+
+    .review-comment {
+      color: #624b56;
+    }
+
+    .upload-box {
+      background: white;
+      border: 1px solid #f0dbe5;
+      border-radius: 18px;
+      padding: 25px;
+      max-width: 700px;
+      margin: 0 auto 40px;
+    }
+
+    .gallery-grid {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 15px;
+    }
+
+    .gallery-item {
+      aspect-ratio: 1 / 1;
+      overflow: hidden;
+      border-radius: 15px;
+      background: #f5e6ed;
+    }
+
+    .gallery-item img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      transition: 0.3s;
+    }
+
+    .gallery-item:hover img {
+      transform: scale(1.05);
+    }
+
+    .contact-section {
+      background: #3d1d2d;
+      color: white;
+    }
+
+    .contact-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 20px;
+      text-align: center;
+    }
+
+    .contact-card {
+      padding: 25px;
+      background: rgba(255,255,255,0.08);
+      border-radius: 15px;
+    }
+
+    .contact-card h3 {
+      margin-bottom: 8px;
+    }
+
+    .owner-section {
+      background: #f7eaf0;
+    }
+
+    .owner-login,
+    .dashboard {
+      max-width: 1000px;
+      margin: auto;
+    }
+
+    .owner-login {
+      max-width: 500px;
+      background: white;
+      padding: 30px;
+      border-radius: 18px;
+      border: 1px solid #ecd5df;
+    }
+
+    .dashboard {
+      display: none;
+    }
+
+    .dashboard-header {
+      background: #3d1d2d;
+      color: white;
+      padding: 25px;
+      border-radius: 15px;
+      margin-bottom: 25px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      gap: 15px;
+    }
+
+    .dashboard-grid {
+      display: grid;
+      gap: 25px;
+    }
+
+    .dashboard-card {
+      background: white;
+      padding: 25px;
+      border-radius: 15px;
+      border: 1px solid #ead7df;
+      overflow-x: auto;
+    }
+
+    .dashboard-card h3 {
+      color: #8f2957;
+      margin-bottom: 18px;
+    }
+
+    .admin-item {
+      border: 1px solid #ead7df;
+      border-radius: 12px;
+      padding: 16px;
+      margin-bottom: 12px;
+      background: #fffafd;
+    }
+
+    .admin-item:last-child {
+      margin-bottom: 0;
+    }
+
+    .admin-actions {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 8px;
+      margin-top: 12px;
+    }
+
+    .status {
+      display: inline-block;
+      padding: 4px 8px;
+      border-radius: 20px;
+      font-size: 0.78rem;
+      font-weight: 700;
+      margin-left: 5px;
+    }
+
+    .status-pending {
+      background: #fff2c7;
+      color: #795d00;
+    }
+
+    .status-confirmed {
+      background: #dff7e7;
+      color: #146b35;
+    }
+
+    .status-cancelled {
+      background: #fde0e0;
+      color: #a21c1c;
+    }
+
+    .status-approved {
+      background: #dff7e7;
+      color: #146b35;
+    }
+
+    .status-hidden {
+      background: #eee;
+      color: #555;
+    }
+
+    .admin-photo {
+      width: 110px;
+      height: 110px;
+      object-fit: cover;
+      border-radius: 10px;
+      margin-bottom: 10px;
+    }
+
+    footer {
+      text-align: center;
+      padding: 25px;
+      background: #24131c;
+      color: #ddd;
+    }
+
+    @media (max-width: 850px) {
+      .services-grid,
+      .reviews-grid {
+        grid-template-columns: 1fr 1fr;
+      }
+
+      .booking-wrapper {
+        grid-template-columns: 1fr;
+      }
+
+      .gallery-grid {
+        grid-template-columns: repeat(3, 1fr);
+      }
+
+      .contact-grid {
+        grid-template-columns: 1fr;
+      }
+    }
+
+    @media (max-width: 650px) {
+      .nav {
+        min-height: 62px;
+      }
+
+      .menu-btn {
+        display: block;
+      }
+
+      .nav-links {
+        display: none;
+        position: absolute;
+        left: 0;
+        right: 0;
+        top: 62px;
+        background: white;
+        flex-direction: column;
+        align-items: stretch;
+        padding: 15px;
+        border-bottom: 1px solid #efdbe4;
+      }
+
+      .nav-links.show {
+        display: flex;
+      }
+
+      .nav-links a {
+        display: block;
+        padding: 10px;
+      }
+
+      .hero {
+        min-height: 580px;
+      }
+
+      .services-grid,
+      .reviews-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .gallery-grid {
+        grid-template-columns: repeat(2, 1fr);
+      }
+
+      section {
+        padding: 55px 0;
+      }
+
+      .dashboard-header {
+        flex-direction: column;
+        align-items: stretch;
+      }
+    }
+  </style>
+</head>
+
+<body>
+
+<header>
+  <div class="container nav">
+    <a href="#home" class="logo">Colloh's Beauty Hub</a>
+
+    <button class="menu-btn" onclick="toggleMenu()">☰</button>
+
+    <ul class="nav-links" id="navLinks">
+      <li><a href="#home" onclick="closeMenu()">Home</a></li>
+      <li><a href="#services" onclick="closeMenu()">Services</a></li>
+      <li><a href="#booking" onclick="closeMenu()">Book</a></li>
+      <li><a href="#reviews" onclick="closeMenu()">Reviews</a></li>
+      <li><a href="#gallery" onclick="closeMenu()">Gallery</a></li>
+      <li><a href="#contact" onclick="closeMenu()">Contact</a></li>
+      <li><a href="#owner" onclick="closeMenu()">Owner</a></li>
+    </ul>
+  </div>
+</header>
+
+<section class="hero" id="home">
+  <div class="container">
+    <div class="hero-content">
+      <h1>Beauty that speaks for itself.</h1>
+
+      <p>
+        Welcome to Colloh's Beauty Hub Westlands.
+        Discover beautiful nails, professional beauty services and a relaxing
+        experience in Westlands, Nairobi.
+      </p>
+
+      <div class="hero-buttons">
+        <a href="#booking" class="btn btn-primary">Book Appointment</a>
+
+        <a
+          href="https://wa.me/254718437894"
+          target="_blank"
+          class="btn btn-secondary"
+        >
+          WhatsApp
+        </a>
+
+        <a href="tel:+254718437894" class="btn btn-secondary">
+          Call Us
+        </a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="services">
+  <div class="container">
+
+    <div class="section-title">
+      <h2>Our Services</h2>
+      <p>Professional beauty services tailored to your style.</p>
+    </div>
+
+    <div class="services-grid">
+
+      <div class="service-card">
+        <h3>Manicure</h3>
+        <p>
+          Clean, neat and beautifully finished nails for an elegant look.
+        </p>
+      </div>
+
+      <div class="service-card">
+        <h3>Pedicure</h3>
+        <p>
+          Relaxing foot care and beautiful pedicure finishes.
+        </p>
+      </div>
+
+      <div class="service-card">
+        <h3>Gel Nails</h3>
+        <p>
+          Stylish gel finishes with beautiful colours and long-lasting results.
+        </p>
+      </div>
+
+      <div class="service-card">
+        <h3>Acrylic Nails</h3>
+        <p>
+          Beautiful acrylic extensions designed around your preferred style.
+        </p>
+      </div>
+
+      <div class="service-card">
+        <h3>Nail Art</h3>
+        <p>
+          Creative nail designs for simple, elegant or statement looks.
+        </p>
+      </div>
+
+      <div class="service-card">
+        <h3>Beauty Services</h3>
+        <p>
+          Additional beauty services available at Colloh's Beauty Hub.
+        </p>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<section id="booking">
+  <div class="container">
+
+    <div class="section-title">
+      <h2>Book Your Appointment</h2>
+      <p>Choose your preferred date and available appointment time.</p>
+    </div>
+
+    <div class="booking-wrapper">
+
+      <div class="info-card">
+
+        <h3>Opening Hours</h3>
+
+        <ul class="hours">
+          <li><span>Monday</span><strong>8:00 AM – 7:00 PM</strong></li>
+          <li><span>Tuesday</span><strong>8:00 AM – 7:00 PM</strong></li>
+          <li><span>Wednesday</span><strong>8:00 AM – 7:00 PM</strong></li>
+          <li><span>Thursday</span><strong>8:00 AM – 7:00 PM</strong></li>
+          <li><span>Friday</span><strong>8:00 AM – 7:00 PM</strong></li>
+          <li><span>Saturday</span><strong>8:00 AM – 7:00 PM</strong></li>
+          <li><span>Sunday</span><strong>Booking Only</strong></li>
+        </ul>
+
+        <div class="sunday-note">
+          Sunday is closed for normal walk-ins, but Sunday appointments can
+          still be booked in advance through this website.
+        </div>
+
+      </div>
+
+      <div class="form-card">
+
+        <h3>Appointment Details</h3>
+
+        <form id="bookingForm">
+
+          <div class="form-group">
+            <label for="bookingName">Your Name</label>
+            <input
+              type="text"
+              id="bookingName"
+              required
+              minlength="2"
+              placeholder="Enter your name"
+            >
+          </div>
+
+          <div class="form-group">
+            <label for="bookingPhone">Phone Number</label>
+            <input
+              type="tel"
+              id="bookingPhone"
+              required
+              minlength="7"
+              placeholder="07XX XXX XXX"
+            >
+          </div>
+
+          <div class="form-group">
+            <label for="bookingService">Service</label>
+
+            <select id="bookingService" required>
+              <option value="">Select a service</option>
+              <option value="Manicure">Manicure</option>
+              <option value="Pedicure">Pedicure</option>
+              <option value="Gel Nails">Gel Nails</option>
+              <option value="Acrylic Nails">Acrylic Nails</option>
+              <option value="Nail Art">Nail Art</option>
+              <option value="Beauty Services">Beauty Services</option>
+            </select>
+          </div>
+
+          <div class="form-group">
+            <label for="bookingDate">Date</label>
+            <input type="date" id="bookingDate" required>
+          </div>
+
+          <div class="form-group">
+            <label for="bookingTime">Time</label>
+
+            <select id="bookingTime" required>
+              <option value="">Select a time</option>
+              <option value="08:00">8:00 AM</option>
+              <option value="09:00">9:00 AM</option>
+              <option value="10:00">10:00 AM</option>
+              <option value="11:00">11:00 AM</option>
+              <option value="12:00">12:00 PM</option>
+              <option value="13:00">1:00 PM</option>
+              <option value="14:00">2:00 PM</option>
+              <option value="15:00">3:00 PM</option>
+              <option value="16:00">4:00 PM</option>
+              <option value="17:00">5:00 PM</option>
+              <option value="18:00">6:00 PM</option>
+            </select>
+          </div>
+
+          <div class="form-group">
+            <label for="bookingNotes">Notes</label>
+
+            <textarea
+              id="bookingNotes"
+              placeholder="Anything you'd like us to know?"
+            ></textarea>
+          </div>
+
+          <button type="submit" class="btn btn-primary" id="bookingButton">
+            Submit Booking
+          </button>
+
+          <div id="bookingMessage" class="form-message"></div>
+
+        </form>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<section id="reviews">
+  <div class="container">
+
+    <div class="section-title">
+      <h2>Client Reviews</h2>
+      <p>See what our clients have shared about their experience.</p>
+    </div>
+
+    <div class="review-form">
+
+      <h3 style="margin-bottom:15px;color:#8f2957;">
+        Leave a Review
+      </h3>
+
+      <form id="reviewForm">
+
+        <div class="form-group">
+          <label for="reviewName">Your Name</label>
+          <input
+            type="text"
+            id="reviewName"
+            required
+            minlength="2"
+            placeholder="Your name"
+          >
+        </div>
+
+        <div class="form-group">
+          <label for="reviewRating">Rating</label>
+
+          <select id="reviewRating" required>
+            <option value="">Select rating</option>
+            <option value="5">★★★★★ - 5</option>
+            <option value="4">★★★★☆ - 4</option>
+            <option value="3">★★★☆☆ - 3</option>
+            <option value="2">★★☆☆☆ - 2</option>
+            <option value="1">★☆☆☆☆ - 1</option>
+          </select>
+        </div>
+
+        <div class="form-group">
+          <label for="reviewComment">Your Review</label>
+
+          <textarea
+            id="reviewComment"
+            required
+            minlength="3"
+            placeholder="Tell us about your experience..."
+          ></textarea>
+        </div>
+
+        <button type="submit" class="btn btn-primary">
+          Submit Review
+        </button>
+
+        <div id="reviewMessage" class="form-message"></div>
+
+      </form>
+    </div>
+
+    <div id="reviewsGrid" class="reviews-grid">
+      <p>Loading reviews...</p>
+    </div>
+
+  </div>
+</section>
+
+<section id="gallery">
+  <div class="container">
+
+    <div class="section-title">
+      <h2>Our Gallery</h2>
+      <p>Beautiful work shared by Colloh's Beauty Hub and our clients.</p>
+    </div>
+
+    <div class="upload-box">
+
+      <h3 style="color:#8f2957;margin-bottom:10px;">
+        Share Your Nail Photo
+      </h3>
+
+      <p style="margin-bottom:15px;color:#765968;">
+        Upload a photo of your nails or beauty experience.
+      </p>
+
+      <form id="photoForm">
+
+        <div class="form-group">
+          <label for="photoName">Your Name</label>
+          <input
+            type="text"
+            id="photoName"
+            placeholder="Optional"
+          >
+        </div>
+
+        <div class="form-group">
+          <label for="photoFile">Choose Photo</label>
+          <input
+            type="file"
+            id="photoFile"
+            accept="image/*"
+            required
+          >
+        </div>
+
+        <button type="submit" class="btn btn-primary" id="photoButton">
+          Upload Photo
+        </button>
+
+        <div id="photoMessage" class="form-message"></div>
+
+      </form>
+
+    </div>
+
+    <div id="galleryGrid" class="gallery-grid">
+      <p>Loading gallery...</p>
+    </div>
+
+  </div>
+</section>
+
+<section id="contact" class="contact-section">
+  <div class="container">
+
+    <div class="section-title">
+      <h2 style="color:white;">Contact Us</h2>
+      <p style="color:#eadce2;">
+        We would love to hear from you.
+      </p>
+    </div>
+
+    <div class="contact-grid">
+
+      <div class="contact-card">
+        <h3>Call</h3>
+        <p>0718 437 894</p>
+        <br>
+
+        <a
+          href="tel:+254718437894"
+          class="btn btn-secondary"
+        >
+          Call Now
+        </a>
+      </div>
+
+      <div class="contact-card">
+        <h3>WhatsApp</h3>
+        <p>+254 718 437 894</p>
+        <br>
+
+        <a
+          href="https://wa.me/254718437894"
+          target="_blank"
+          class="btn btn-secondary"
+        >
+          WhatsApp Us
+        </a>
+      </div>
+
+      <div class="contact-card">
+        <h3>Location</h3>
+        <p>Westlands, Nairobi, Kenya</p>
+        <br>
+
+        <a
+          href="https://maps.app.goo.gl/kF5S5ubouqs1Qpu87?g_st=ac"
+          target="_blank"
+          class="btn btn-secondary"
+        >
+          Get Directions
+        </a>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<section id="owner" class="owner-section">
+
+  <div class="container">
+
+    <div class="section-title">
+      <h2>Owner Dashboard</h2>
+      <p>Private management area for Colloh's Beauty Hub.</p>
+    </div>
+
+    <div class="owner-login" id="ownerLogin">
+
+      <h3 style="color:#8f2957;margin-bottom:15px;">
+        Owner Login
+      </h3>
+
+      <form id="loginForm">
+
+        <div class="form-group">
+          <label for="ownerEmail">Email</label>
+
+          <input
+            type="email"
+            id="ownerEmail"
+            required
+            placeholder="Owner email"
+          >
+        </div>
+
+        <div class="form-group">
+          <label for="ownerPassword">Password</label>
+
+          <input
+            type="password"
+            id="ownerPassword"
+            required
+            placeholder="Password"
+          >
+        </div>
+
+        <button type="submit" class="btn btn-primary">
+          Login
+        </button>
+
+        <div id="loginMessage" class="form-message"></div>
+
+      </form>
+
+    </div>
+
+    <div class="dashboard" id="dashboard">
+
+      <div class="dashboard-header">
+
+        <div>
+          <h3>Welcome, Owner</h3>
+          <p>Manage bookings, reviews and photos.</p>
+        </div>
+
+        <button
+          class="btn btn-secondary"
+          onclick="logoutOwner()"
+        >
+          Logout
+        </button>
+
+      </div>
+
+      <div class="dashboard-grid">
+
+        <div class="dashboard-card">
+
+          <h3>Bookings</h3>
+
+          <div id="adminBookings">
+            Loading bookings...
+          </div>
+
+        </div>
+
+        <div class="dashboard-card">
+
+          <h3>Reviews Management</h3>
+
+          <div id="adminReviews">
+            Loading reviews...
+          </div>
+
+        </div>
+
+        <div class="dashboard-card">
+
+          <h3>Photo Management</h3>
+
+          <div id="adminPhotos">
+            Loading photos...
+          </div>
+
+        </div>
+
+      </div>
+
+    </div>
+
+  </div>
+</section>
+
+<footer>
+  <p>
+    © <span id="year"></span> Colloh's Beauty Hub Westlands.
+    All rights reserved.
+  </p>
+</footer>
+
+<script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+
+<script>
+
+const SUPABASE_URL =
+  "https://zpricuxhnhycwsrbvrqv.supabase.co";
+
+const SUPABASE_PUBLISHABLE_KEY =
+  "sb_publishable_3yID6KrW3pI4F8fK_qqIqg_v10ljf4z";
+
+const supabaseClient =
+  window.supabase.createClient(
+    SUPABASE_URL,
+    SUPABASE_PUBLISHABLE_KEY
+  );
+
+const PHONE_NUMBER = "254718437894";
+
+const PHOTO_BUCKET = "site-photos";
+
+let currentOwner = null;
+
+
+/* ============================================
+   BASIC HELPERS
+============================================ */
+
+document.getElementById("year").textContent =
+  new Date().getFullYear();
+
+
+function toggleMenu() {
+  document
+    .getElementById("navLinks")
+    .classList.toggle("show");
+}
+
+
+function closeMenu() {
+  document
+    .getElementById("navLinks")
+    .classList.remove("show");
+}
+
+
+function escapeHTML(value) {
+
+  if (value === null || value === undefined) {
+    return "";
+  }
+
+  return String(value)
+    .replace(/&/g, "&amp;")
+    .replace(/</g, "&lt;")
+    .replace(/>/g, "&gt;")
+    .replace(/"/g, "&quot;")
+    .replace(/'/g, "&#039;");
+}
+
+
+function formatDate(date) {
+
+  if (!date) return "";
+
+  return new Date(date + "T00:00:00")
+    .toLocaleDateString(
+      "en-KE",
+      {
+        weekday: "short",
+        year: "numeric",
+        month: "short",
+        day: "numeric"
+      }
+    );
+}
+
+
+function formatTime(time) {
+
+  if (!time) return "";
+
+  const parts = time.split(":");
+
+  let hour = parseInt(parts[0], 10);
+  const minute = parts[1];
+
+  const suffix = hour >= 12 ? "PM" : "AM";
+
+  hour = hour % 12;
+
+  if (hour === 0) {
+    hour = 12;
+  }
+
+  return `${hour}:${minute} ${suffix}`;
+}
+
+
+function showMessage(elementId, message, type) {
+
+  const element =
+    document.getElementById(elementId);
+
+  element.textContent = message;
+
+  element.className =
+    "form-message " +
+    (type === "success"
+      ? "success-message"
+      : "error-message");
+}
+
+
+/* ============================================
+   DATE
+============================================ */
+
+const bookingDate =
+  document.getElementById("bookingDate");
+
+const today =
+  new Date().toISOString().split("T")[0];
+
+bookingDate.min = today;
+
+
+/* ============================================
+   BOOKING SYSTEM
+============================================ */
+
+document
+  .getElementById("bookingForm")
+  .addEventListener("submit", async function(e) {
+
+    e.preventDefault();
+
+    const button =
+      document.getElementById("bookingButton");
+
+    button.disabled = true;
+    button.textContent = "Checking availability...";
+
+    const name =
+      document
+        .getElementById("bookingName")
+        .value.trim();
+
+    const phone =
+      document
+        .getElementById("bookingPhone")
+        .value.trim();
+
+    const service =
+      document
+        .getElementById("bookingService")
+        .value;
+
+    const date =
+      document
+        .getElementById("bookingDate")
+        .value;
+
+    const time =
+      document
+        .getElementById("bookingTime")
+        .value;
+
+    const notes =
+      document
+        .getElementById("bookingNotes")
+        .value.trim();
+
+
+    if (!name || !phone || !service || !date || !time) {
+
+      showMessage(
+        "bookingMessage",
+        "Please fill in all required fields.",
+        "error"
+      );
+
+      button.disabled = false;
+      button.textContent = "Submit Booking";
+
+      return;
+    }
+
+
+    const { data: existingBookings, error: checkError } =
+      await supabaseClient
+        .from("bookings")
+        .select("id,status")
+        .eq("booking_date", date)
+        .eq("booking_time", time)
+        .neq("status", "cancelled");
+
+
+    if (checkError) {
+
+      console.error(checkError);
+
+      showMessage(
+        "bookingMessage",
+        "Could not check availability. Please try again.",
+        "error"
+      );
+
+      button.disabled = false;
+      button.textContent = "Submit Booking";
+
+      return;
+    }
+
+
+    if (
+      existingBookings &&
+      existingBookings.length > 0
+    ) {
+
+      showMessage(
+        "bookingMessage",
+        "Sorry, that time is already booked. Please choose another time.",
+        "error"
+      );
+
+      button.disabled = false;
+      button.textContent = "Submit Booking";
+
+      return;
+    }
+
+
+    button.textContent =
+      "Submitting booking...";
+
+
+    const { error } =
+      await supabaseClient
+        .from("bookings")
+        .insert([
+          {
+            name: name,
+            phone: phone,
+            service: service,
+            booking_date: date,
+            booking_time: time,
+            notes: notes,
+            status: "pending"
+          }
+        ]);
+
+
+    if (error) {
+
+      console.error(error);
+
+      showMessage(
+        "bookingMessage",
+        "Booking could not be submitted. Please try again.",
+        "error"
+      );
+
+      button.disabled = false;
+      button.textContent = "Submit Booking";
+
+      return;
+    }
+
+
+    showMessage(
+      "bookingMessage",
+      "Your booking has been submitted successfully!",
+      "success"
+    );
+
+
+    const whatsappText =
+      `Hello Colloh's Beauty Hub, I have made a booking.%0A%0A` +
+      `Name: ${encodeURIComponent(name)}%0A` +
+      `Phone: ${encodeURIComponent(phone)}%0A` +
+      `Service: ${encodeURIComponent(service)}%0A` +
+      `Date: ${encodeURIComponent(formatDate(date))}%0A` +
+      `Time: ${encodeURIComponent(formatTime(time))}`;
+
+
+    const whatsappButton =
+      document.createElement("a");
+
+    whatsappButton.href =
+      `https://wa.me/${PHONE_NUMBER}?text=${whatsappText}`;
+
+    whatsappButton.target = "_blank";
+
+    whatsappButton.className =
+      "btn btn-success";
+
+    whatsappButton.style.marginTop =
+      "10px";
+
+    whatsappButton.textContent =
+      "Notify Us on WhatsApp";
+
+
+    document
+      .getElementById("bookingMessage")
+      .appendChild(
+        document.createElement("br")
+      );
+
+    document
+      .getElementById("bookingMessage")
+      .appendChild(
+        whatsappButton
+      );
+
+
+    document
+      .getElementById("bookingForm")
+      .reset();
+
+
+    button.disabled = false;
+    button.textContent = "Submit Booking";
+
+  });
+
+
+/* ============================================
+   REVIEWS
+============================================ */
+
+async function loadPublicReviews() {
+
+  const grid =
+    document.getElementById("reviewsGrid");
+
+  const { data, error } =
+    await supabaseClient
+      .from("reviews")
+      .select("*")
+      .eq("approved", true)
+      .order("created_at", {
+        ascending: false
+      });
+
+
+  if (error) {
+
+    console.error(error);
+
+    grid.innerHTML =
+      "<p>Reviews could not be loaded.</p>";
+
+    return;
+  }
+
+
+  if (!data || data.length === 0) {
+
+    grid.innerHTML =
+      "<p>No reviews yet. Be the first to leave a review!</p>";
+
+    return;
+  }
+
+
+  grid.innerHTML =
+    data.map(review => {
+
+      const rating =
+        Math.max(
+          1,
+          Math.min(
+            5,
+            Number(review.rating)
+          )
+        );
+
+
+      const stars =
+        "★".repeat(rating) +
+        "☆".repeat(5 - rating);
+
+
+      return `
+        <div class="review-card">
+
+          <div class="review-name">
+            ${escapeHTML(review.name)}
+          </div>
+
+          <div class="stars">
+            ${stars}
+          </div>
+
+          <p class="review-comment">
+            ${escapeHTML(review.comment)}
+          </p>
+
+        </div>
+      `;
+
+    }).join("");
+}
+
+
+document
+  .getElementById("reviewForm")
+  .addEventListener("submit", async function(e) {
+
+    e.preventDefault();
+
+    const name =
+      document
+        .getElementById("reviewName")
+        .value.trim();
+
+    const rating =
+      Number(
+        document
+          .getElementById("reviewRating")
+          .value
+      );
+
+    const comment =
+      document
+        .getElementById("reviewComment")
+        .value.trim();
+
+
+    if (!name || !rating || !comment) {
+
+      showMessage(
+        "reviewMessage",
+        "Please complete all required fields.",
+        "error"
+      );
+
+      return;
+    }
+
+
+    const submitButton =
+      document.querySelector('#reviewForm button[type="submit"]');
+
+    submitButton.disabled = true;
+    submitButton.textContent = "Submitting Review...";
+
+    const { error } =
+      await supabaseClient
+        .from("reviews")
+        .insert([
+          {
+            name: name,
+            rating: rating,
+            comment: comment,
+            approved: true
+          }
+        ]);
+
+
+    if (error) {
+
+      console.error("REVIEW SUBMISSION ERROR:", error);
+
+      showMessage(
+        "reviewMessage",
+        "Review failed: " + (error.message || "Please try again."),
+        "error"
+      );
+
+      submitButton.disabled = false;
+      submitButton.textContent = "Submit Review";
+      return;
+    }
+
+
+    showMessage(
+      "reviewMessage",
+      "Thank you! Your review is now public.",
+      "success"
+    );
+
+
+    document
+      .getElementById("reviewForm")
+      .reset();
+
+
+    submitButton.disabled = false;
+    submitButton.textContent = "Submit Review";
+
+    await loadPublicReviews();
+
+  });
+
+
+/* ============================================
+   PHOTO UPLOAD
+============================================ */
+
+document
+  .getElementById("photoForm")
+  .addEventListener("submit", async function(e) {
+
+    e.preventDefault();
+
+    const button =
+      document.getElementById("photoButton");
+
+    button.disabled = true;
+    button.textContent = "Uploading...";
+
+
+    const name =
+      document
+        .getElementById("photoName")
+        .value.trim();
+
+    const file =
+      document
+        .getElementById("photoFile")
+        .files[0];
+
+
+    if (!file) {
+
+      showMessage(
+        "photoMessage",
+        "Please choose a photo.",
+        "error"
+      );
+
+      button.disabled = false;
+      button.textContent = "Upload Photo";
+
+      return;
+    }
+
+
+    if (!file.type.startsWith("image/")) {
+
+      showMessage(
+        "photoMessage",
+        "Please upload an image file.",
+        "error"
+      );
+
+      button.disabled = false;
+      button.textContent = "Upload Photo";
+
+      return;
+    }
+
+
+    if (file.size > 5 * 1024 * 1024) {
+
+      showMessage(
+        "photoMessage",
+        "Photo must be 5MB or smaller.",
+        "error"
+      );
+
+      button.disabled = false;
+      button.textContent = "Upload Photo";
+
+      return;
+    }
+
+
+    const extension =
+      file.name
+        .split(".")
+        .pop()
+        .toLowerCase();
+
+
+    const filePath =
+      `customer/${crypto.randomUUID()}.${extension}`;
+
+
+    const { error: uploadError } =
+      await supabaseClient
+        .storage
+        .from(PHOTO_BUCKET)
+        .upload(
+          filePath,
+          file,
+          {
+            cacheControl: "3600",
+            upsert: false,
+            contentType: file.type
+          }
+        );
+
+
+    if (uploadError) {
+
+      console.error(uploadError);
+
+      showMessage(
+        "photoMessage",
+        "Photo upload failed. Please try again.",
+        "error"
+      );
+
+      button.disabled = false;
+      button.textContent = "Upload Photo";
+
+      return;
+    }
+
+
+    const { data: publicUrlData } =
+      supabaseClient
+        .storage
+        .from(PHOTO_BUCKET)
+        .getPublicUrl(filePath);
+
+
+    const publicUrl =
+      publicUrlData.publicUrl;
+
+
+    const { error: insertError } =
+      await supabaseClient
+        .from("photos")
+        .insert([
+          {
+            name: name || null,
+            url: publicUrl,
+            path: filePath,
+            approved: false
+          }
+        ]);
+
+
+    if (insertError) {
+
+      console.error(insertError);
+
+      await supabaseClient
+        .storage
+        .from(PHOTO_BUCKET)
+        .remove([filePath]);
+
+
+      showMessage(
+        "photoMessage",
+        "Photo was uploaded but could not be registered. Please try again.",
+        "error"
+      );
+
+      button.disabled = false;
+      button.textContent = "Upload Photo";
+
+      return;
+    }
+
+
+    showMessage(
+      "photoMessage",
+      "Photo uploaded successfully. It will appear in the gallery after approval by the owner.",
+      "success"
+    );
+
+
+    document
+      .getElementById("photoForm")
+      .reset();
+
+
+    button.disabled = false;
+    button.textContent = "Upload Photo";
+
+  });
+
+
+/* ============================================
+   PUBLIC GALLERY
+============================================ */
+
+async function loadGallery() {
+
+  const grid =
+    document.getElementById("galleryGrid");
+
+
+  const { data, error } =
+    await supabaseClient
+      .from("photos")
+      .select("*")
+      .eq("approved", true)
+      .order("created_at", {
+        ascending: false
+      });
+
+
+  if (error) {
+
+    console.error(error);
+
+    grid.innerHTML =
+      "<p>Gallery could not be loaded.</p>";
+
+    return;
+  }
+
+
+  if (!data || data.length === 0) {
+
+    grid.innerHTML =
+      "<p>No photos have been added yet.</p>";
+
+    return;
+  }
+
+
+  grid.innerHTML =
+    data.map(photo => {
+
+      return `
+        <div class="gallery-item">
+          <img
+            src="${escapeHTML(photo.url)}"
+            alt="${escapeHTML(
+              photo.name || "Colloh's Beauty Hub"
+            )}"
+            loading="lazy"
+          >
+        </div>
+      `;
+
+    }).join("");
+}
+
+
+/* ============================================
+   OWNER LOGIN
+============================================ */
+
+document
+  .getElementById("loginForm")
+  .addEventListener("submit", async function(e) {
+
+    e.preventDefault();
+
+    const email =
+      document
+        .getElementById("ownerEmail")
+        .value.trim();
+
+    const password =
+      document
+        .getElementById("ownerPassword")
+        .value;
+
+
+    const { data, error } =
+      await supabaseClient
+        .auth
+        .signInWithPassword({
+          email: email,
+          password: password
+        });
+
+
+    if (error) {
+
+      console.error(error);
+
+      showMessage(
+        "loginMessage",
+        "Login failed. Check your email and password.",
+        "error"
+      );
+
+      return;
+    }
+
+
+    const user =
+      data.user;
+
+
+    const { data: ownerRecord, error: ownerError } =
+      await supabaseClient
+        .from("site_owner")
+        .select("id,owner_user_id")
+        .eq("id", 1)
+        .eq("owner_user_id", user.id)
+        .maybeSingle();
+
+
+    if (ownerError || !ownerRecord) {
+
+      await supabaseClient.auth.signOut();
+
+      showMessage(
+        "loginMessage",
+        "This account is not registered as the website owner.",
+        "error"
+      );
+
+      return;
+    }
+
+
+    currentOwner = user;
+
+    showDashboard();
+
+  });
+
+
+async function showDashboard() {
+
+  document
+    .getElementById("ownerLogin")
+    .style.display = "none";
+
+
+  document
+    .getElementById("dashboard")
+    .style.display = "block";
+
+
+  await Promise.all([
+    loadAdminBookings(),
+    loadAdminReviews(),
+    loadAdminPhotos()
+  ]);
+}
+
+
+/* ============================================
+   OWNER BOOKINGS
+============================================ */
+
+async function loadAdminBookings() {
+
+  const container =
+    document.getElementById("adminBookings");
+
+
+  const { data, error } =
+    await supabaseClient
+      .from("bookings")
+      .select("*")
+      .order("booking_date", {
+        ascending: true
+      })
+      .order("booking_time", {
+        ascending: true
+      });
+
+
+  if (error) {
+
+    console.error(error);
+
+    container.innerHTML =
+      "<p>Could not load bookings.</p>";
+
+    return;
+  }
+
+
+  if (!data || data.length === 0) {
+
+    container.innerHTML =
+      "<p>No bookings yet.</p>";
+
+    return;
+  }
+
+
+  container.innerHTML =
+    data.map(booking => {
+
+      let statusClass =
+        "status-pending";
+
+
+      if (booking.status === "confirmed") {
+        statusClass = "status-confirmed";
+      }
+
+      if (booking.status === "cancelled") {
+        statusClass = "status-cancelled";
+      }
+
+
+      return `
+        <div class="admin-item">
+
+          <strong>
+            ${escapeHTML(booking.name)}
+          </strong>
+
+          <span class="status ${statusClass}">
+            ${escapeHTML(booking.status)}
+          </span>
+
+          <p>
+            <strong>Phone:</strong>
+            ${escapeHTML(booking.phone)}
+          </p>
+
+          <p>
+            <strong>Service:</strong>
+            ${escapeHTML(booking.service)}
+          </p>
+
+          <p>
+            <strong>Date:</strong>
+            ${formatDate(booking.booking_date)}
+          </p>
+
+          <p>
+            <strong>Time:</strong>
+            ${formatTime(booking.booking_time)}
+          </p>
+
+          ${
+            booking.notes
+              ? `<p><strong>Notes:</strong> ${escapeHTML(booking.notes)}</p>`
+              : ""
+          }
+
+          <div class="admin-actions">
+
+            ${
+              booking.status !== "confirmed"
+                ? `
+                  <button
+                    class="btn btn-success btn-small"
+                    onclick="updateBookingStatus(${booking.id}, 'confirmed')"
+                  >
+                    Confirm
+                  </button>
+                `
+                : ""
+            }
+
+            ${
+              booking.status !== "cancelled"
+                ? `
+                  <button
+                    class="btn btn-dark btn-small"
+                    onclick="updateBookingStatus(${booking.id}, 'cancelled')"
+                  >
+                    Cancel
+                  </button>
+                `
+                : ""
+            }
+
+            <!-- NEW DELETE BUTTON -->
+
+            <button
+              class="btn btn-danger btn-small"
+              onclick="deleteBooking(${booking.id})"
+            >
+              Delete
+            </button>
+
+          </div>
+
+        </div>
+      `;
+
+    }).join("");
+}
+
+
+/* ============================================
+   UPDATE BOOKING STATUS
+============================================ */
+
+async function updateBookingStatus(id, status) {
+
+  const action =
+    status === "confirmed"
+      ? "confirm"
+      : "cancel";
+
+
+  const confirmed =
+    confirm(
+      `Are you sure you want to ${action} this booking?`
+    );
+
+
+  if (!confirmed) {
+    return;
+  }
+
+
+  const { error } =
+    await supabaseClient
+      .from("bookings")
+      .update({
+        status: status
+      })
+      .eq("id", id);
+
+
+  if (error) {
+
+    console.error(error);
+
+    alert(
+      "Could not update booking."
+    );
+
+    return;
+  }
+
+
+  await loadAdminBookings();
+}
+
+
+/* ============================================
+   DELETE BOOKING
+============================================ */
+
+async function deleteBooking(id) {
+
+  const confirmed =
+    confirm(
+      "Are you sure you want to permanently delete this booking? This action cannot be undone."
+    );
+
+
+  if (!confirmed) {
+    return;
+  }
+
+
+  const { error } =
+    await supabaseClient
+      .from("bookings")
+      .delete()
+      .eq("id", id);
+
+
+  if (error) {
+
+    console.error(error);
+
+    alert(
+      "Could not delete booking. Please try again."
+    );
+
+    return;
+  }
+
+
+  alert(
+    "Booking deleted successfully."
+  );
+
+
+  await loadAdminBookings();
+}
+
+
+/* ============================================
+   OWNER REVIEW MANAGEMENT
+============================================ */
+
+async function loadAdminReviews() {
+
+  const container =
+    document.getElementById("adminReviews");
+
+
+  const { data, error } =
+    await supabaseClient
+      .from("reviews")
+      .select("*")
+      .order("created_at", {
+        ascending: false
+      });
+
+
+  if (error) {
+
+    console.error(error);
+
+    container.innerHTML =
+      "<p>Could not load reviews.</p>";
+
+    return;
+  }
+
+
+  if (!data || data.length === 0) {
+
+    container.innerHTML =
+      "<p>No reviews yet.</p>";
+
+    return;
+  }
+
+
+  container.innerHTML =
+    data.map(review => {
+
+      const approved =
+        review.approved === true;
+
+
+      const rating =
+        Math.max(
+          1,
+          Math.min(
+            5,
+            Number(review.rating)
+          )
+        );
+
+
+      const stars =
+        "★".repeat(rating) +
+        "☆".repeat(5 - rating);
+
+
+      return `
+        <div class="admin-item">
+
+          <strong>
+            ${escapeHTML(review.name)}
+          </strong>
+
+          <span class="status ${
+            approved
+              ? "status-approved"
+              : "status-hidden"
+          }">
+            ${
+              approved
+                ? "Public"
+                : "Hidden"
+            }
+          </span>
+
+          <div class="stars">
+            ${stars}
+          </div>
+
+          <p>
+            ${escapeHTML(review.comment)}
+          </p>
+
+          <div class="admin-actions">
+
+            ${
+              approved
+                ? `
+                  <button
+                    class="btn btn-dark btn-small"
+                    onclick="setReviewApproval(${review.id}, false)"
+                  >
+                    Hide
+                  </button>
+                `
+                : `
+                  <button
+                    class="btn btn-success btn-small"
+                    onclick="setReviewApproval(${review.id}, true)"
+                  >
+                    Approve
+                  </button>
+                `
+            }
+
+            <button
+              class="btn btn-danger btn-small"
+              onclick="deleteReview(${review.id})"
+            >
+              Delete
+            </button>
+
+          </div>
+
+        </div>
+      `;
+
+    }).join("");
+}
+
+
+async function setReviewApproval(id, approved) {
+
+  const { error } =
+    await supabaseClient
+      .from("reviews")
+      .update({
+        approved: approved
+      })
+      .eq("id", id);
+
+
+  if (error) {
+
+    console.error(error);
+
+    alert(
+      "Could not update review."
+    );
+
+    return;
+  }
+
+
+  await loadAdminReviews();
+
+  await loadPublicReviews();
+}
+
+
+async function deleteReview(id) {
+
+  const confirmed =
+    confirm(
+      "Are you sure you want to permanently delete this review?"
+    );
+
+
+  if (!confirmed) {
+    return;
+  }
+
+
+  const { error } =
+    await supabaseClient
+      .from("reviews")
+      .delete()
+      .eq("id", id);
+
+
+  if (error) {
+
+    console.error(error);
+
+    alert(
+      "Could not delete review."
+    );
+
+    return;
+  }
+
+
+  await loadAdminReviews();
+
+  await loadPublicReviews();
+}
+
+
+/* ============================================
+   OWNER PHOTO MANAGEMENT
+============================================ */
+
+async function loadAdminPhotos() {
+
+  const container =
+    document.getElementById("adminPhotos");
+
+
+  const { data, error } =
+    await supabaseClient
+      .from("photos")
+      .select("*")
+      .order("created_at", {
+        ascending: false
+      });
+
+
+  if (error) {
+
+    console.error(error);
+
+    container.innerHTML =
+      "<p>Could not load photos.</p>";
+
+    return;
+  }
+
+
+  if (!data || data.length === 0) {
+
+    container.innerHTML =
+      "<p>No photos yet.</p>";
+
+    return;
+  }
+
+
+  container.innerHTML =
+    data.map(photo => {
+
+      const approved =
+        photo.approved === true;
+
+
+      return `
+        <div class="admin-item">
+
+          <img
+            class="admin-photo"
+            src="${escapeHTML(photo.url)}"
+            alt="Uploaded beauty photo"
+          >
+
+          <p>
+            <strong>Name:</strong>
+            ${escapeHTML(photo.name || "Anonymous")}
+          </p>
+
+          <span class="status ${
+            approved
+              ? "status-approved"
+              : "status-hidden"
+          }">
+            ${
+              approved
+                ? "Public"
+                : "Hidden"
+            }
+          </span>
+
+          <div class="admin-actions">
+
+            ${
+              approved
+                ? `
+                  <button
+                    class="btn btn-dark btn-small"
+                    onclick="setPhotoApproval(${photo.id}, false)"
+                  >
+                    Hide
+                  </button>
+                `
+                : `
+                  <button
+                    class="btn btn-success btn-small"
+                    onclick="setPhotoApproval(${photo.id}, true)"
+                  >
+                    Approve
+                  </button>
+                `
+            }
+
+            <button
+              class="btn btn-danger btn-small"
+              onclick="deletePhoto(${photo.id}, '${encodeURIComponent(photo.path)}')"
+            >
+              Delete
+            </button>
+
+          </div>
+
+        </div>
+      `;
+
+    }).join("");
+}
+
+
+async function setPhotoApproval(id, approved) {
+
+  const { error } =
+    await supabaseClient
+      .from("photos")
+      .update({
+        approved: approved
+      })
+      .eq("id", id);
+
+
+  if (error) {
+
+    console.error(error);
+
+    alert(
+      "Could not update photo."
+    );
+
+    return;
+  }
+
+
+  await loadAdminPhotos();
+
+  await loadGallery();
+}
+
+
+async function deletePhoto(id, encodedPath) {
+
+  const confirmed =
+    confirm(
+      "Are you sure you want to permanently delete this photo?"
+    );
+
+
+  if (!confirmed) {
+    return;
+  }
+
+
+  const path =
+    decodeURIComponent(encodedPath);
+
+
+  const { error: dbError } =
+    await supabaseClient
+      .from("photos")
+      .delete()
+      .eq("id", id);
+
+
+  if (dbError) {
+
+    console.error(dbError);
+
+    alert(
+      "Could not delete photo record."
+    );
+
+    return;
+  }
+
+
+  const { error: storageError } =
+    await supabaseClient
+      .storage
+      .from(PHOTO_BUCKET)
+      .remove([path]);
+
+
+  if (storageError) {
+
+    console.error(storageError);
+
+    alert(
+      "Photo record deleted, but the Storage file could not be removed."
+    );
+  }
+
+
+  await loadAdminPhotos();
+
+  await loadGallery();
+}
+
+
+/* ============================================
+   LOGOUT
+============================================ */
+
+async function logoutOwner() {
+
+  await supabaseClient
+    .auth
+    .signOut();
+
+
+  currentOwner = null;
+
+
+  document
+    .getElementById("dashboard")
+    .style.display = "none";
+
+
+  document
+    .getElementById("ownerLogin")
+    .style.display = "block";
+
+
+  document
+    .getElementById("loginForm")
+    .reset();
+}
+
+
+/* ============================================
+   CHECK EXISTING LOGIN
+============================================ */
+
+async function checkOwnerSession() {
+
+  const {
+    data: {
+      session
+    }
+  } =
+    await supabaseClient
+      .auth
+      .getSession();
+
+
+  if (!session) {
+    return;
+  }
+
+
+  const user =
+    session.user;
+
+
+  const { data: ownerRecord } =
+    await supabaseClient
+      .from("site_owner")
+      .select("id,owner_user_id")
+      .eq("id", 1)
+      .eq("owner_user_id", user.id)
+      .maybeSingle();
+
+
+  if (ownerRecord) {
+
+    currentOwner = user;
+
+    showDashboard();
+
+  }
+}
+
+
+/* ============================================
+   AUTH STATE
+============================================ */
+
+supabaseClient
+  .auth
+  .onAuthStateChange(
+    async (event, session) => {
+
+      if (
+        event === "SIGNED_OUT"
+      ) {
+
+        currentOwner = null;
+
+        document
+          .getElementById("dashboard")
+          .style.display = "none";
+
+        document
+          .getElementById("ownerLogin")
+          .style.display = "block";
+
+      }
+
+    }
+  );
+
+
+/* ============================================
+   INITIAL LOAD
+============================================ */
+
+async function initializeSite() {
+
+  await Promise.all([
+    loadPublicReviews(),
+    loadGallery()
+  ]);
+
+
+  await checkOwnerSession();
+
+}
+
+
+initializeSite();
+
+</script>
+
+</body>
+</html>
